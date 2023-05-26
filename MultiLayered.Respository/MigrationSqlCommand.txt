@@ -1,0 +1,125 @@
+PM> add-migration Create1
+Build started...
+Build succeeded.
+Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.1 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: MigrationsAssembly=MultiLayered.Respository 
+To undo this action, use Remove-Migration.
+PM> update-database
+Build started...
+Build succeeded.
+Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.1 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: MigrationsAssembly=MultiLayered.Respository 
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (167ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      CREATE DATABASE [Dbo_MultiLayeredArchitectureDB];
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (86ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      IF SERVERPROPERTY('EngineEdition') <> 5
+      BEGIN
+          ALTER DATABASE [Dbo_MultiLayeredArchitectureDB] SET READ_COMMITTED_SNAPSHOT ON;
+      END;
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [__EFMigrationsHistory] (
+          [MigrationId] nvarchar(150) NOT NULL,
+          [ProductVersion] nvarchar(32) NOT NULL,
+          CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+      );
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [MigrationId], [ProductVersion]
+      FROM [__EFMigrationsHistory]
+      ORDER BY [MigrationId];
+Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20230525021108_Create1'.
+Applying migration '20230525021108_Create1'.
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [Countries] (
+          [Id] int NOT NULL IDENTITY,
+          [Name] nvarchar(100) NOT NULL,
+          [CreatedDate] datetime2 NOT NULL,
+          [UpdatedDate] datetime2 NULL,
+          CONSTRAINT [PK_Countries] PRIMARY KEY ([Id])
+      );
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [Teams] (
+          [Id] int NOT NULL IDENTITY,
+          [Name] nvarchar(100) NOT NULL,
+          [TeamPrice] decimal(18,2) NOT NULL,
+          [CountryId] int NOT NULL,
+          [CreatedDate] datetime2 NOT NULL,
+          [UpdatedDate] datetime2 NULL,
+          CONSTRAINT [PK_Teams] PRIMARY KEY ([Id]),
+          CONSTRAINT [FK_Teams_Countries_CountryId] FOREIGN KEY ([CountryId]) REFERENCES [Countries] ([Id]) ON DELETE CASCADE
+      );
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [TeamFeatures] (
+          [Id] int NOT NULL IDENTITY,
+          [Color] nvarchar(max) NULL,
+          [LeagueCup] int NOT NULL,
+          [EuropeanCup] int NOT NULL,
+          [TeamId] int NOT NULL,
+          CONSTRAINT [PK_TeamFeatures] PRIMARY KEY ([Id]),
+          CONSTRAINT [FK_TeamFeatures_Teams_TeamId] FOREIGN KEY ([TeamId]) REFERENCES [Teams] ([Id]) ON DELETE CASCADE
+      );
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CreatedDate', N'Name', N'UpdatedDate') AND [object_id] = OBJECT_ID(N'[Countries]'))
+          SET IDENTITY_INSERT [Countries] ON;
+      INSERT INTO [Countries] ([Id], [CreatedDate], [Name], [UpdatedDate])
+      VALUES (1, '0001-01-01T00:00:00.0000000', N'Turkey', NULL),
+      (2, '0001-01-01T00:00:00.0000000', N'England', NULL),
+      (3, '0001-01-01T00:00:00.0000000', N'Spain', NULL),
+      (4, '0001-01-01T00:00:00.0000000', N'Italy', NULL),
+      (5, '0001-01-01T00:00:00.0000000', N'Germany', NULL);
+      IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CreatedDate', N'Name', N'UpdatedDate') AND [object_id] = OBJECT_ID(N'[Countries]'))
+          SET IDENTITY_INSERT [Countries] OFF;
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CountryId', N'CreatedDate', N'Name', N'TeamPrice', N'UpdatedDate') AND [object_id] = OBJECT_ID(N'[Teams]'))
+          SET IDENTITY_INSERT [Teams] ON;
+      INSERT INTO [Teams] ([Id], [CountryId], [CreatedDate], [Name], [TeamPrice], [UpdatedDate])
+      VALUES (1, 1, '2023-05-25T05:11:07.9644882+03:00', N'Galatasaray SK', 500000.0, NULL),
+      (2, 1, '2023-05-25T05:11:07.9644893+03:00', N'Fenerbahce SK', 400000.0, NULL),
+      (3, 1, '2023-05-25T05:11:07.9644894+03:00', N'Besiktas JK', 300000.0, NULL),
+      (4, 1, '2023-05-25T05:11:07.9644895+03:00', N'Trabzonspor SK', 200000.0, NULL),
+      (5, 1, '2023-05-25T05:11:07.9644895+03:00', N'Basaksehir FC', 100000.0, NULL),
+      (6, 2, '2023-05-25T05:11:07.9644896+03:00', N'Manchester City', 15000000.0, NULL),
+      (7, 2, '2023-05-25T05:11:07.9644897+03:00', N'Manchester UTD', 14000000.0, NULL),
+      (8, 2, '2023-05-25T05:11:07.9644898+03:00', N'Chesea FC', 12000000.0, NULL),
+      (9, 3, '2023-05-25T05:11:07.9644899+03:00', N'Barcelona FC', 11480000.0, NULL),
+      (10, 3, '2023-05-25T05:11:07.9644900+03:00', N'Real Madrid FC', 14000000.0, NULL),
+      (11, 3, '2023-05-25T05:11:07.9644901+03:00', N'Atetico Madrid FC', 12220000.0, NULL),
+      (12, 4, '2023-05-25T05:11:07.9644902+03:00', N'Juventus FC', 15420000.0, NULL),
+      (13, 4, '2023-05-25T05:11:07.9644903+03:00', N'Internazional FC', 12670000.0, NULL),
+      (14, 4, '2023-05-25T05:11:07.9644904+03:00', N'Inter Milan FC', 14790000.0, NULL),
+      (15, 4, '2023-05-25T05:11:07.9644904+03:00', N'Napoli FC', 155500000.0, NULL),
+      (16, 4, '2023-05-25T05:11:07.9644905+03:00', N'Roma FC', 13330000.0, NULL),
+      (17, 5, '2023-05-25T05:11:07.9644906+03:00', N'Bayern Munch', 12550000.0, NULL),
+      (18, 5, '2023-05-25T05:11:07.9644907+03:00', N'Borusia Dortmund', 11000000.0, NULL);
+      IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CountryId', N'CreatedDate', N'Name', N'TeamPrice', N'UpdatedDate') AND [object_id] = OBJECT_ID(N'[Teams]'))
+          SET IDENTITY_INSERT [Teams] OFF;
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX [IX_TeamFeatures_TeamId] ON [TeamFeatures] ([TeamId]);
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX [IX_Teams_CountryId] ON [Teams] ([CountryId]);
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+      VALUES (N'20230525021108_Create1', N'6.0.1');
+Done.
+PM> 

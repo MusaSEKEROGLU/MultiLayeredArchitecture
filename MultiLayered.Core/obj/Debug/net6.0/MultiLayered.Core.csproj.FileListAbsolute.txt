@@ -1,0 +1,12 @@
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Core\bin\Debug\net6.0\MultiLayered.Core.deps.json
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Core\bin\Debug\net6.0\MultiLayered.Core.dll
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Core\bin\Debug\net6.0\MultiLayered.Core.pdb
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Core\obj\Debug\net6.0\MultiLayered.Core.csproj.AssemblyReference.cache
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Core\obj\Debug\net6.0\MultiLayered.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Core\obj\Debug\net6.0\MultiLayered.Core.AssemblyInfoInputs.cache
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Core\obj\Debug\net6.0\MultiLayered.Core.AssemblyInfo.cs
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Core\obj\Debug\net6.0\MultiLayered.Core.csproj.CoreCompileInputs.cache
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Core\obj\Debug\net6.0\MultiLayered.Core.dll
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Core\obj\Debug\net6.0\refint\MultiLayered.Core.dll
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Core\obj\Debug\net6.0\MultiLayered.Core.pdb
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Core\obj\Debug\net6.0\ref\MultiLayered.Core.dll

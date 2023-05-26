@@ -1,0 +1,31 @@
+﻿@model TeamDto
+@{
+    ViewData["Title"] = "SaveTeams";
+}
+
+<h3 style="color:cornflowerblue">Yeni Takım Ekle</h3>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-controller="Teams" asp-action="SaveTeams" method="post">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamPrice"></label>
+                <input asp-for="TeamPrice" class="form-control" />
+                <span asp-validation-for="TeamPrice" class="text-danger"></span>
+            </div>           
+            <div class="form-group">
+                <label asp-for="CountryId"></label>
+                <select asp-for="CountryId" asp-items="ViewBag.country" class="form-control"></select>               
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>

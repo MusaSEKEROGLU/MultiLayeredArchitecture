@@ -1,0 +1,40 @@
+﻿@model List<TeamWithCountryDto>
+@{
+    ViewData["Title"] = "Index";
+}
+<h3 style="color:cornflowerblue">Europa League</h3>
+<br />
+<table class="table table-striped ">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>TeamPrice</th>
+            <th>Country</th>
+            <th>CreatedDate</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var teams in Model)
+        {
+            <tr>
+                <td>@teams.Id</td>
+                <td>@teams.Name</td>
+                <td>@teams.TeamPrice</td>
+                <td>@teams.Country.Name</td>
+                <td>@teams.CreatedDate</td>                
+                <td>
+                    <a class="btn btn-warning" asp-controller="Teams"
+                   asp-action="UpdateTeams" asp-route-id="@teams.Id">Güncelle</a>
+                </td>
+
+                <td>
+                    <a class="btn btn-danger" asp-controller="Teams"
+                   asp-action="DeleteTeams" asp-route-id="@teams.Id">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

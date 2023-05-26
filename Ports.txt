@@ -1,0 +1,7 @@
+
+
+MultiLayered.API => https://localhost:7000   HTTPS
+MultiLayered.API => http://localhost:5010    HTTP
+
+MultiLayered.WebApp => https://localhost:7192  HTTPS
+MultiLayered.WebApp => http://localhost:5012 HTTP

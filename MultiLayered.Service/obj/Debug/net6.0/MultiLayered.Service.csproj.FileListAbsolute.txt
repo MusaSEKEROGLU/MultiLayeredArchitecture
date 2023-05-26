@@ -1,0 +1,17 @@
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\bin\Debug\net6.0\MultiLayered.Service.deps.json
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\bin\Debug\net6.0\MultiLayered.Service.dll
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\bin\Debug\net6.0\MultiLayered.Service.pdb
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\bin\Debug\net6.0\MultiLayered.Core.dll
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\bin\Debug\net6.0\MultiLayered.Respository.dll
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\bin\Debug\net6.0\MultiLayered.Respository.pdb
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\bin\Debug\net6.0\MultiLayered.Core.pdb
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\obj\Debug\net6.0\MultiLayered.Service.csproj.AssemblyReference.cache
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\obj\Debug\net6.0\MultiLayered.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\obj\Debug\net6.0\MultiLayered.Service.AssemblyInfoInputs.cache
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\obj\Debug\net6.0\MultiLayered.Service.AssemblyInfo.cs
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\obj\Debug\net6.0\MultiLayered.Service.csproj.CoreCompileInputs.cache
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\obj\Debug\net6.0\MultiLayered.Service.csproj.CopyComplete
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\obj\Debug\net6.0\MultiLayered.Service.dll
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\obj\Debug\net6.0\refint\MultiLayered.Service.dll
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\obj\Debug\net6.0\MultiLayered.Service.pdb
+C:\Users\drnma\Desktop\MultiLayeredArchitecture\MultiLayered.Service\obj\Debug\net6.0\ref\MultiLayered.Service.dll
